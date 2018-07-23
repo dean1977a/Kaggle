@@ -4,7 +4,7 @@
 
 1.数值类型 
 
-2.词嵌入(keras或者el5)
+2.词嵌入(keras或者el5)  el5-->lightgbm-->keras 
 
 算法：
 
