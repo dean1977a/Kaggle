@@ -16,4 +16,5 @@
 
 4.lightgbm+linear 
 
-model stack
+5.StackNet
+
