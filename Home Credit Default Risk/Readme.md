@@ -6,6 +6,8 @@
 
 2.词嵌入(keras或者el5)  el5-->lightgbm-->keras GRU  XOR  keras embedding -->keras GRU
 
+3.LDA / NMF / LSA
+
 算法：
 
 1.lightgbm 
