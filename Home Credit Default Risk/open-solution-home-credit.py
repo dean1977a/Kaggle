@@ -1,48 +1,28 @@
-import logging
 import os
+import gc
 import random
 import sys
-import multiprocessing as mp
-from functools import reduce
-
+import logging
 import glob
 import numpy as np
 import pandas as pd
-from tqdm import tqdm
-import yaml
-from attrdict import AttrDict
+import lightgbm as lgb
+import category_encoders as ce
+import multiprocessing as mp
 
-import numpy as np
+
+from tqdm import tqdm
+from copy import deepcopy
+from attrdict import AttrDict
 from steppy.base import BaseTransformer
 from steppy.utils import get_logger
-
-from copy import deepcopy
 from functools import partial
-
-import category_encoders as ce
-import numpy as np
-import pandas as pd
+from functools import reduce
 from scipy.stats import kurtosis, iqr, skew
-from sklearn.externals import joblib
 from sklearn.linear_model import LinearRegression
-
-from .utils import parallel_apply, safe_div
-
-
-import lightgbm as lgb
-import numpy as np
-import pandas as pd
+from .utils import parallel_apply, safe_div,set_seed
 from sklearn.externals import joblib
-from sklearn.pipeline import Pipeline
-from sklearn.preprocessing import StandardScaler
-from toolkit.sklearn_transformers.models import SklearnClassifier
 
-import gc
-
-import numpy as np
-from deepsense import neptune
-from sklearn.externals import joblib
-from .utils import set_seed
 
 
 logger = get_logger()
